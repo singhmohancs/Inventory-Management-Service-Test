@@ -1,0 +1,116 @@
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $dark-grey;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.ht-auto {
+  height: auto !important;
+}
+
+.ht-100 {
+  height: 100% !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mn-w-auto {
+  min-width: auto !important;
+}
+
+.mx-width-650 {
+  max-width: 650px;
+}
+
+.mx-width-810 {
+  max-width: 810px;
+}
+
+.border-seperater {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+  border: 1px solid $menu-hover-color;
+}
+
+.shadow-0 {
+  box-shadow: none !important;
+}
+
+.bg-light-primary {
+  background: $light-primary;
+}
+
+.im-grid-content {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.im-content {
+  background: $light-200;
+  width: calc(100vw - 250px);
+  z-index: 1;
+  flex-grow: 1;
+  height: calc(100vh);
+
+  @media screen and(max-width:767px) and(min-width:320px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background: $alto-color;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: $scrollbar-thumb;
+}
+
+.im-content-body {
+  padding: 20px;
+
+}
+
+.im-not-found-content {
+  font-size: $xsmall-font;
+  color: $dark-grey;
+  text-align: center;
+  padding: 10px;
+}
+
+.im-heading {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}

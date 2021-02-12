@@ -1,0 +1,42 @@
+<a mat-button class="btn-link table-link" [routerLink]="['/product']" >
+    <mat-icon>keyboard_backspace</mat-icon><span class="ml-5">go back</span></a>
+<mat-card>
+    <mat-card-header> <mat-card-title class="im-heading" mat-dialog-title>Product Details</mat-card-title></mat-card-header>
+    <mat-card-content>
+        <div fxLayout="row">
+            <div fxLayout="column" fxFlex="50">
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Product Name</h5>
+                    <p class="card-label-text">{{product?.productName}}</p>
+                </div>
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Vendor Name</h5>
+                    <p class="card-label-text">{{product?.vendor}}</p>
+                </div>
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Product Quantity</h5>
+                    <p class="card-label-text">{{product?.quantity}}</p>
+                </div>
+            </div>
+            <div fxLayout="column" fxFlex="50">
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Product Type</h5>
+                    <p class="card-label-text">{{product?.productType}}</p>
+                </div>
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Product Price</h5>
+                    <p class="card-label-text">{{product?.price | currency:'USD'}}</p>
+                </div>
+                <div fxLayout="column">
+                    <h5 class="card-label-title">Date Created</h5>
+                    <p class="card-label-text">{{product?.createdDate | date:'mediumDate'}}</p>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="column">
+            <h5 class="card-label-title">Product Description</h5>
+            <p class="card-label-text">{{product?.description}}</p>
+        </div>
+    </mat-card-content>
+</mat-card>
+

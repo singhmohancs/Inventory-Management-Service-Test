@@ -1,0 +1,28 @@
+<div class="auth-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="auth-card shadow-0">
+    <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title class="auth-im-heading mb-30">Inventory Management System</mat-card-title>
+      <div class="alert alert-danger" [hidden]="!error" translate>
+        {{ error }}
+      </div>
+    </mat-card-header>
+
+
+    <mat-card-content class="mat-content-fields">
+      <h6 class="mb-0">Login</h6>
+      <form (ngSubmit)="doLogin()" [formGroup]="loginForm" class="mt-20" novalidate>
+        <mat-form-field fxLayout="row">
+          <input matInput placeholder="email" type="email" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field fxLayout="row">
+          <input matInput placeholder="password" type="password" formControlName="password">
+        </mat-form-field>
+        <div class="spacing-20"></div>
+        <button mat-raised-button  [disabled] = "loginForm.invalid" color="primary" class=" w-100 btn-primary">log in</button>
+        <div class="spacing-20"></div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

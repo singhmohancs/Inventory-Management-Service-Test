@@ -1,0 +1,23 @@
+.auth-im-heading {
+  font-size: 28px !important;
+  letter-spacing: 5px;
+  font-weight: 400;
+  display: flex !important;
+  align-items: center;
+}
+.mat-content-fields {
+  h6 {
+    letter-spacing: 1px;
+  }
+}
+.auth-wrapper {
+  height: 100vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 600px;
+  .mat-form-field-wrapper {
+    width: 100%;
+  }
+}

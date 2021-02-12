@@ -1,0 +1,112 @@
+.table-scroll {
+  overflow: auto;
+  max-height: calc(100vh - 160px);
+
+  @media screen and(max-width:480px) and(min-width:320px) {
+    max-height: calc(100vh - 310px);
+
+  }
+}
+
+.im-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 7px !important;
+  background: $light-200 !important;
+
+  .mat-header-cell,
+  .mat-cell {
+    font-size: $xxsmall-font;
+    color: $dark-grey !important;
+    min-width: 145px;
+    padding-left: 0px !important;
+    padding-right: 20px;
+    white-space: nowrap;
+    border: none;
+
+    &:first-child {
+      min-width: auto;
+      padding: 0 0px 0px 10px !important;
+    }
+  }
+
+  .mat-header-row {
+    height: 40px;
+
+    .mat-header-cell {
+      font-weight: $font-weight-medium;
+      font-size: 14px;
+
+    }
+
+  }
+
+  .mat-row {
+    height: 45px;
+    border: none;
+
+    background: $white;
+
+    &:hover {
+      background: $light-primary;
+    }
+
+    .mat-cell {
+      font-weight: $font-weight-normal;
+
+      .table-link {
+        text-align: left;
+        padding: 0px !important;
+
+        text-decoration: underline;
+
+        &.cdk-focused {
+          background: transparent !important;
+
+          .mat-button-focus-overlay {
+            opacity: 0 !important;
+          }
+        }
+
+        &:hover {
+          color: $primary;
+          background: transparent;
+
+        }
+
+        .mat-ripple {
+          background: transparent;
+          &:not(:empty){
+          transform:none;
+          }
+        }
+
+        .mat-button-focus-overlay {
+          background: transparent !important;
+          opacity: 0 !important;
+          transition: none !important;
+
+
+        }
+
+      }
+    }
+
+  }
+}
+
+.im-table-info {
+  .mat-icon {
+    color: $scrollbar-thumb;
+
+    &.active {
+      color: $primary;
+    }
+  }
+
+}
+
+
+.mat-ripple-element {
+  transition-duration: 0ms !important;
+}

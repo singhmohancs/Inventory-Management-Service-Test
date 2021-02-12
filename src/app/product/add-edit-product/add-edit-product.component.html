@@ -1,0 +1,49 @@
+<div fxLayout="row">
+    <h4 class="im-heading" mat-dialog-title>{{ edit ? 'Edit Product' : 'Add Product' }}</h4>
+</div>
+<form class="w-100 mx-width-650 form-wrapper" (ngSubmit)="updateProduct()" [formGroup]="productForm">
+    <mat-dialog-content >
+        <mat-form-field fxLayout="row">
+            <input class="im-form-input" matInput placeholder="Product name" formControlName="productName"
+                type="text">
+            <mat-error>
+                Product name is required
+            </mat-error>
+        </mat-form-field>
+        <div fxLayout="row" class="im-form-fields">
+            <div fxLayout="column" class="form-col" fxFlex="50">
+                
+                <mat-form-field fxLayout="row">
+                    <input class="im-form-input" matInput placeholder="Product Type" formControlName="productType" type="text">
+                </mat-form-field>
+
+                <mat-form-field fxLayout="row">
+                    <input class="im-form-input" matInput placeholder="Unit Price" formControlName="price"
+                        type="number">
+                        <mat-error>
+                            Product price is required
+                        </mat-error>
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" class="form-col" fxFlex="50">
+                <mat-form-field fxLayout="row">
+                    <input class="im-form-input" matInput placeholder="Vendor Name" formControlName="vendor"
+                        type="text">
+                </mat-form-field>
+
+                <mat-form-field fxLayout="row">
+                    <input class="im-form-input" matInput placeholder="Quantity" formControlName="quantity"
+                        type="number">
+                </mat-form-field>
+            </div>
+        </div>
+        <mat-form-field fxLayout="row">
+            <textarea class="im-form-input" matInput placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+        <div class="spacing-20"></div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="mb-0 pb-0">
+        <button mat-button mat-dialog-close>cancel</button>
+        <button mat-button [disabled]="productForm.invalid" color="primary" class="block-btn">{{ edit ? 'update' : 'add' }}</button>
+    </mat-dialog-actions>
+</form>

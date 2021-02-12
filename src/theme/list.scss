@@ -1,0 +1,17 @@
+.mat-list-item{
+    &:hover, &:focus{
+        background:$light-primary !important;
+    }
+}
+.mat-list-group{
+    .mat-list-item {
+     border: 0;
+    border-radius: 0;
+    background-color: $light-primary;
+    font-size: .937625rem;
+    &:not(:last-child){
+    border-bottom:1px solid $white !important;
+    }
+}
+
+}

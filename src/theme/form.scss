@@ -1,0 +1,101 @@
+.mat-form-field {
+    width: 100%;
+    margin-top: 6px;
+    &.mat-focused {
+      .mat-form-field-ripple {
+        background-color: $primary !important;
+      }
+      .mat-input-element {
+        caret-color: $primary;
+      }
+      &.mat-form-field-can-float {
+        &.mat-form-field-should-float {
+          .mat-form-field-label {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+    &.mat-primary {
+      .mat-option {
+        &.mat-selected:not(.mat-option-disabled) {
+          color: $primary;
+        }
+      }
+    }
+    &.mat-form-field-can-float {
+      &.mat-form-field-should-float {
+        .mat-form-field-label {
+          font-size: 14px;
+          color: $dark-grey !important;
+           top: 1.28125em;
+       
+        }
+        &.ng-dirty {
+          .mat-form-field-label {
+            color: $primary !important;
+          }
+        }
+      }
+    }
+    
+    &.mat-form-field-invalid {
+      .mat-form-field-label {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .mat-form-field-ripple {
+        background-color: $alto-color;
+      }
+      &.ng-dirty {
+        .mat-form-field-label {
+          color: $warning;
+        }
+        .mat-form-field-ripple {
+          background-color: $warning !important;
+        }
+      }
+    }
+  
+    .mat-form-field-wrapper {
+      margin-bottom: -0.25em;
+      width:100%;
+    }
+    .mat-form-field-infix {
+      padding: 10px 0;
+    }
+    .mat-form-field-label {
+      font-weight: normal;
+      font-size: 15px;
+      color: $gray-400 !important;
+    }
+    .mat-form-field-underline {
+      background-color: $alto-color !important;
+    }
+  }
+
+  .im-form-input{
+    font-size: 15px !important;
+  }
+  
+  .form-col {
+    &:not(:last-child){
+        padding-right: 30px;
+    }
+     .mat-form-field-wrapper {
+         width: 100%;
+     }
+ }
+
+ .im-form-fields {
+  @media screen and(max-width:676px)and(min-width:320px) {
+    flex-direction: column !important;
+  }
+  .form-col {
+    @media screen and(max-width:676px)and(min-width:320px) {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+      padding-right: 0px !important;
+    }
+  }
+}
+ 

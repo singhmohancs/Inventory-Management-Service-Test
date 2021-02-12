@@ -1,0 +1,95 @@
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$spblue: (
+    50: #e3f8f9,
+    100: #f5e1b9,
+    200: #f5e3bf,
+    300: #f6ca71,
+    400: #f3a300,
+    500: #f1b53b,
+    600: #f0b43d,
+    700: #f5b73c,
+    800: #ca8c11,
+    900: #cc8a07,
+    A100: #f3a300,
+    A200: #f3e4b2,
+    A400: #f3bb4a,
+    A700: #db9d21,
+    contrast: (
+        50: #000000,
+        100: #ffffff,
+        200: #ffffff,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    )
+);
+
+$spgrey: (
+    50: #f0f1f2,
+    100: #dbdde0,
+    200: #c3c7cb,
+    300: #aab0b6,
+    400: #989fa6,
+    500: #868e96,
+    600: #7e868e,
+    700: #737b83,
+    800: #697179,
+    900: #565f68,
+    contrast: (
+        50: #ffffff,
+        100: #ffffff,
+        200: #ffffff,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff
+    )
+);
+
+$sp-app-primary: mat-palette($spblue);
+$sp-app-accent:  mat-palette($spgrey);
+
+// The warn palette is optional (defaults to red).
+$sp-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$sp-app-theme: mat-light-theme($sp-app-primary, $sp-app-accent, $sp-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($sp-app-theme);
+
+$custom-typography-theme: mat-typography-config(
+  $font-family: "Roboto"
+);
+
+@include angular-material-typography($custom-typography-theme);
+
+@import 'theme/variables.scss';
+@import 'theme/spacing.scss';
+@import 'theme/button.scss';
+@import 'theme/table.scss';
+@import 'theme/auth.scss';
+@import 'theme/text.scss';
+@import 'theme/form.scss';
+@import 'theme/base.scss';
+@import 'theme/list.scss';
+@import 'theme/size.scss';
+
+
+
